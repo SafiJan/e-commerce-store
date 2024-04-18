@@ -11,6 +11,8 @@
   max-width: 600px;
   border: 1px solid var(--bg-secondary);
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-color);
 }
 
 .logout-container .card-wrapper > * {
@@ -24,4 +26,27 @@
 
 .card-action i {
   padding-right: 0.5rem;
+}
+
+/* Add animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card-wrapper {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Add transitions */
+.card-action i {
+  transition: transform 0.3s ease;
+}
+
+.card-action i:hover {
+  transform: scale(1.2);
 }

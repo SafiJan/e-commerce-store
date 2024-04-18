@@ -1,10 +1,16 @@
 :root {
   --bg-grey: rgb(248, 248, 248);
+  --border-radius: 0.25rem;
+  --heading-3: 1.5rem;
 }
 
 .cart-wrapper {
   max-width: 80%;
   margin: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 1rem;
+  border-radius: var(--border-radius);
 }
 
 .cart-wrapper .heading-3 {
@@ -23,6 +29,9 @@
 
 .cart-main > * {
   border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 1rem;
 }
 
 .cart-product {
@@ -35,6 +44,7 @@
   background-color: var(--bg-grey);
   padding: 0 1rem 1rem;
   height: max-content;
+  border-radius: var(--border-radius);
 }
 
 /* MEDIA QUERIES */

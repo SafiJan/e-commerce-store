@@ -1,7 +1,17 @@
+:root {
+  --bg-grey: rgb(248, 248, 248);
+  --primary-color: #007bff;
+  --primary-disabled: #adb5bd;
+  --border-radius: 0.25rem;
+  --heading-3: 1.5rem;
+  --bg-secondary: #ced4da;
+}
+
 .checkout-container .heading-3 {
   font-size: var(--heading-3);
   font-weight: bold;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .checkout-container .checkout-wrapper {
@@ -11,6 +21,10 @@
   max-width: 80%;
   width: 100%;
   margin: 1rem auto;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
 }
 
 .checkout-address .address-list {
@@ -27,6 +41,11 @@
   font-size: 0.9rem;
   border-radius: var(--border-radius);
   border: 1px solid var(--bg-secondary);
+  transition: background-color 0.3s;
+}
+
+.checkout-address .address:hover {
+  background-color: var(--bg-grey);
 }
 
 .checkout-address .address .address-name {
@@ -41,6 +60,15 @@
   gap: 0.5rem;
   font-size: 1rem;
   padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkout-address .add-address:hover {
+  background-color: #0056b3;
 }
 
 .checkout-container .address-modal {
@@ -99,31 +127,32 @@
 .checkout-container .btn-link {
   font-size: 0.9rem;
   color: var(--primary-color);
+  transition: color 0.3s;
 }
 
 .checkout-container .btn-link:hover {
   text-decoration: underline;
+  color: #0056b3;
 }
 
 .checkout-container .place-order {
-  width: -webkit-fill-available;
+  width: 100%;
   margin: 1rem 0.5rem;
   font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkout-container .place-order:hover {
+  background-color: #0056b3;
 }
 
 .checkout-container .btn-primary:disabled {
   background-color: var(--primary-disabled);
   cursor: not-allowed;
-}
-
-@media screen and (max-width: 900px) {
-  .checkout-container .checkout-wrapper {
-    max-width: 90%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .checkout-container .checkout-wrapper {
-    grid-template-columns: 1fr;
-  }
 }

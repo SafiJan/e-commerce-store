@@ -1,3 +1,10 @@
+:root {
+  --bg-secondary: #ced4da;
+  --primary-color: #007bff;
+  --border-radius: 0.25rem;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .order-summary-container {
   padding: 1rem;
 }
@@ -6,6 +13,8 @@
   margin-bottom: 1rem;
   text-align: center;
   color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .order-summary-wrapper {
@@ -46,6 +55,11 @@
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.order-summary-wrapper .order-product:hover {
+  transform: translateY(-5px);
 }
 
 .order-summary-wrapper .order-product img {
